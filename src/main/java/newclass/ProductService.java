@@ -25,37 +25,37 @@ public class ProductService {
     @PostConstruct
     public void init() {
         products = new ArrayList<>();
-        products.add(new Product(1000, "f230fh0g3", "Bamboo Watch", "Product Description", "moto.jpg", 65,
+        products.add(new Product(1000, "f230fh0g3", "Bimoto-TESIH2", "Product Description", "moto.jpg", 65,
                 "Accessories", 24, InventoryStatus.INSTOCK, 5));
-        products.add(new Product(1001, "nvklal433", "Black Watch", "Product Description", "moto 2.jpg", 72,
+        products.add(new Product(1001, "nvklal433", "Aprilia-RS600", "Product Description", "moto 2.jpg", 72,
                 "Accessories", 61, InventoryStatus.INSTOCK, 4));
-        products.add(new Product(1002, "zz21cz3c1", "Blue Band", "Product Description", "moto 3.jpg", 79,
+        products.add(new Product(1002, "zz21cz3c1", "Aprilia-EB800", "Product Description", "moto 3.jpg", 79,
                 "Fitness", 2, InventoryStatus.LOWSTOCK, 3));
-        products.add(new Product(1003, "244wgerg2", "Blue T-Shirt", "Product Description", "moto 4.jpg", 29,
+        products.add(new Product(1003, "244wgerg2", "KTM-TS200", "Product Description", "moto 4.jpg", 29,
                 "Clothing", 25, InventoryStatus.INSTOCK, 5));
-        products.add(new Product(1004, "h456wer53", "Bracelet", "Product Description", "moto 5.jpg", 15,
+        products.add(new Product(1004, "h456wer53", "Susuki GSX250R", "Product Description", "moto 5.jpg", 15,
                 "Accessories", 73, InventoryStatus.INSTOCK, 4));
-        products.add(new Product(1005, "av2231fwg", "Brown Purse", "Product Description", "moto 6.jpg", 120,
+        products.add(new Product(1005, "av2231fwg", "Kawasaki 1500", "Product Description", "moto 6.jpg", 120,
                 "Accessories", 0, InventoryStatus.OUTOFSTOCK, 4));
-        products.add(new Product(1006, "bib36pfvm", "Chakra Bracelet", "Product Description", "moto 7.jpg", 32,
+        products.add(new Product(1006, "bib36pfvm", "Husqvarna Svartpilen 401", "Product Description", "moto 7.jpg", 32,
                 "Accessories", 5, InventoryStatus.LOWSTOCK, 3));
-        products.add(new Product(1007, "mbvjkgip5", "Galaxy Earrings", "Product Description", "moto 8.jpg", 34,
+        products.add(new Product(1007, "mbvjkgip5", "BMW F900", "Product Description", "moto 8.jpg", 34,
                 "Accessories", 23, InventoryStatus.INSTOCK, 5));
-        products.add(new Product(1008, "vbb124btr", "Game Controller", "Product Description", "moto 9.jpg", 99,
+        products.add(new Product(1008, "vbb124btr", "Royal Enfield", "Product Description", "moto 9.jpg", 99,
                 "Electronics", 2, InventoryStatus.LOWSTOCK, 4));
-        products.add(new Product(1009, "cm230f032", "Gaming Set", "Product Description", "moto 10.jpg", 299,
+        products.add(new Product(1009, "cm230f032", "Yamaha RB", "Product Description", "moto 10.jpg", 299,
                 "Electronics", 63, InventoryStatus.INSTOCK, 3));
-        products.add(new Product(1010, "plb34234v", "Gold Phone Case", "Product Description", "moto 11.jpg", 24,
+        products.add(new Product(1010, "plb34234v", "honda 190R", "Product Description", "moto 11.jpg", 24,
                 "Accessories", 0, InventoryStatus.OUTOFSTOCK, 4));
-        products.add(new Product(1011, "4920nnc2d", "Green Earbuds", "Product Description", "moto 12.jpg", 89,
+        products.add(new Product(1011, "4920nnc2d", "suzuki bandit 1200", "Product Description", "moto 12.jpg", 89,
                 "Electronics", 23, InventoryStatus.INSTOCK, 4));
-        products.add(new Product(1012, "250vm23cc", "Green T-Shirt", "Product Description", "moto 13.jpg", 49,
+        products.add(new Product(1012, "250vm23cc", "suzuki ax 100", "Product Description", "moto 13.jpg", 49,
                 "Clothing", 74, InventoryStatus.INSTOCK, 5));
-        products.add(new Product(1013, "fldsmn31b", "Grey T-Shirt", "Product Description", "moto 14.jpg", 48,
+        products.add(new Product(1013, "fldsmn31b", "pulsar 200 ns", "Product Description", "moto 14.jpg", 48,
                 "Clothing", 0, InventoryStatus.OUTOFSTOCK, 3));
-        products.add(new Product(1014, "waas1x2as", "Headphones", "Product Description", "moto 15.jpg", 175,
+        products.add(new Product(1014, "waas1x2as", "dominar 400", "Product Description", "moto 15.jpg", 175,
                 "Electronics", 8, InventoryStatus.LOWSTOCK, 5));
-        products.add(new Product(1015, "vb34btbg5", "Light Green T-Shirt", "Product Description", "moto 16.jpg", 49,
+        products.add(new Product(1015, "vb34btbg5", "Lhonda xl 200", "Product Description", "moto 16.jpg", 49,
                 "Clothing", 34, InventoryStatus.INSTOCK, 4));
         products.add(new Product(1016, "k8l6j58jl", "Lime Band", "Product Description", "lime-band.jpg", 79,
                 "Fitness", 12, InventoryStatus.INSTOCK, 3));
