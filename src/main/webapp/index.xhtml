@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Pagina Principal</title>
+        <style type="text/css">
+            .product-item .product-item-content {
+                border: 1px solid var(--surface-d);
+                border-radius: 3px;
+                margin: .3rem;
+                text-align: center;
+                padding: 2rem 0;
+            }
+
+            .product-item .product-image {
+                width: 50%;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div class="card">
+            <h:form>
+                <p:growl id="messages"/>
+
+                <p:menubar>                    
+                    <p:menuitem value="Products"  outcome="index-crud" />  
+                    <p:menuitem value="Promociones"  outcome="index-crud" />        
+                    <p:menuitem value="Repuestos"  outcome="index-crud" />   
+                    <p:menuitem value="Compra" icon="pi pi-shopping-cart" outcome="index-crud" />   
+
+                    <p:divider layout="vertical"/>
+
+                    <p:menuitem value="Quit" icon="pi pi-fw pi-power-off"/>
+
+                    <f:facet name="options">
+                        <div class="ui-input-icon-left p-mr-2">
+                            <i class="pi pi-fw pi-search" />
+                            <p:inputText placeholder="Search"/>
+                        </div>
+                        <p:button value="Login" icon="pi pi-fw pi-sign-in" styleClass="ui-button-info" outcome="index-login"/>
+                    </f:facet>
+                </p:menubar>
+            </h:form>
+        </div>
+        <h:form id="form">
+
+            <div class="card">
+                <p:carousel value="#{carouselView.products}" var="product" circular="true" autoplayInterval="3000"
+                            responsiveOptions="#{carouselView.responsiveOptions}" numVisible="3" numScroll="1">
+                    <f:facet name="header" >
+                        <h5 align="center ">Motos de primera mano</h5>
+                    </f:facet>
+                    <div class="product-item">
+                        <div class="product-item-content">
+                            <div class="p-mb-3">
+                                <p:graphicImage name="images/#{product.image}" styleClass="product-image"/>
+                            </div>
+                            <div>
+                                <h4 class="p-mb-1">#{product.name}</h4>
+                                <h6 class="p-mt-0 p-mb-3">
+                                    <h:outputText value="#{product.price}">
+                                        <f:convertNumber type="currency" pattern="¤#0" currencySymbol="$" />
+                                    </h:outputText>
+                                </h6>
+                                <span class="product-badge status-#{product.inventoryStatus.name().toLowerCase()}">#{product.inventoryStatus.text}</span>
+                                <div class="p-mt-5">
+                                    <p:commandButton type="button" icon="pi pi-search" styleClass="rounded-button p-mr-2" />
+                                    <p:commandButton type="button" icon="pi pi-star" styleClass="ui-button-success rounded-button p-mr-2" />
+                                    <p:commandButton type="button" icon="pi pi-cog" styleClass="ui-button-help rounded-button" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p:carousel>
+            </div>
+
+            <div class="card">
+                <p:carousel value="#{carouselView.products}" var="product" circular="true" autoplayInterval="3000"
+                            responsiveOptions="#{carouselView.responsiveOptions}" numVisible="3" numScroll="1">
+                    <f:facet name="header" >
+                        <h5 align="center ">Motos de segunda mano</h5>
+                    </f:facet>
+                    <div class="product-item">
+                        <div class="product-item-content">
+                            <div class="p-mb-3">
+                                <p:graphicImage name="images/#{product.image}" styleClass="product-image"/>
+                            </div>
+                            <div>
+                                <h4 class="p-mb-1">#{product.name}</h4>
+                                <h6 class="p-mt-0 p-mb-3">
+                                    <h:outputText value="#{product.price}">
+                                        <f:convertNumber type="currency" pattern="¤#0" currencySymbol="$" />
+                                    </h:outputText>
+                                </h6>
+                                <span class="product-badge status-#{product.inventoryStatus.name().toLowerCase()}">#{product.inventoryStatus.text}</span>
+                                <div class="p-mt-5">
+                                    <p:commandButton type="button" icon="pi pi-search" styleClass="rounded-button p-mr-2" />
+                                    <p:commandButton type="button" icon="pi pi-star" styleClass="ui-button-success rounded-button p-mr-2" />
+                                    <p:commandButton type="button" icon="pi pi-cog" styleClass="ui-button-help rounded-button" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p:carousel>
+            </div>
+
+            <div class="card" align="center">
+                <p:carousel value="#{carouselView.products}" var="product" orientation="vertical"
+                            verticalViewPortHeight="352px" style="max-width: 400px;margin-top: 2em;">
+                    <f:facet name="header">
+                        <h5>Vertical</h5>
+                    </f:facet>
+                    <div class="product-item">
+                        <div class="product-item-content">
+                            <div class="p-mb-3">
+                                <p:graphicImage name="images/#{product.image}" styleClass="product-image"/>
+                            </div>
+                            <div>
+                                <h4 class="p-mb-1">#{product.name}</h4>
+                                <h6 class="p-mt-0 p-mb-3">
+                                    <h:outputText value="#{product.price}">
+                                        <f:convertNumber type="currency" pattern="¤#0" currencySymbol="$" />
+                                    </h:outputText>
+                                </h6>
+                                <span class="product-badge status-#{product.inventoryStatus.name().toLowerCase()}">#{product.inventoryStatus.text}</span>
+                                <div class="p-mt-5">
+                                    <p:commandButton type="button" icon="pi pi-search" styleClass="rounded-button p-mr-2" />
+                                    <p:commandButton type="button" icon="pi pi-star" styleClass="ui-button-success rounded-button p-mr-2" />
+                                    <p:commandButton type="button" icon="pi pi-cog" styleClass="ui-button-help rounded-button" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p:carousel>
+            </div>           
+        </h:form>
+        <footer>
+            
+        </footer>
+    </h:body>
+</html>
+
