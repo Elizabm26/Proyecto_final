@@ -27,17 +27,17 @@
                 <p:growl id="messages"/>
 
                 <p:menubar>                    
-                    <p:menuitem value="Products"  outcome="index-crud" />  
+                    <p:menuitem value="Productos"  outcome="index-crud" />  
                     <p:menuitem value="Promociones"  outcome="index-crud" />        
                     <p:menuitem value="Repuestos"  outcome="index-crud" />   
-                    <p:menuitem value="Compra" icon="pi pi-shopping-cart" outcome="index-crud" />                    
+                    <p:menuitem value="Comprar" icon="pi pi-shopping-cart" outcome="index-crud" />                    
 
                     <f:facet name="options">
                         <div class="ui-input-icon-left p-mr-2">
                             <i class="pi pi-fw pi-search" />
-                            <p:inputText placeholder="Search"/>
+                            <p:inputText placeholder="Buscar"/>
                         </div>
-                        <p:button value="Login" icon="pi pi-fw pi-sign-in" styleClass="ui-button-info" outcome="index-login"/>
+                        <p:button value="Inicio de sesión" icon="pi pi-fw pi-sign-in" styleClass="ui-button-info" outcome="index-login"/>
                     </f:facet>
                 </p:menubar>
             </h:form>
@@ -108,7 +108,7 @@
                 <p:carousel value="#{carouselView.products}" var="product" orientation="vertical"
                             verticalViewPortHeight="352px" style="max-width: 400px;margin-top: 2em;">
                     <f:facet name="header">
-                        <h5>Vertical</h5>
+                        <h5>Paquetes promocionales</h5>
                     </f:facet>
                     <div class="product-item">
                         <div class="product-item-content">
